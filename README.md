@@ -36,11 +36,11 @@ The project is organized to ensure traceability from raw datasets to trained mod
 ```
 ## Data Handling Note
 
-Due to GitHub’s **100 MB per-file limit**, all raw CSV datasets are stored as **ZIP archives** in the `datasets/` directory.
+Due to GitHub's **100 MB per-file limit**, only the largest raw datasets are stored as **ZIP archives** in the `datasets/` directory. Smaller datasets remain available in their original **CSV format**.
 
-The training notebooks are configured to read compressed datasets directly.
-
-If manual inspection or external tooling is used, the archives must be extracted beforehand.
+The training notebooks are configured to call **.csv files**.
+* For files already in `.csv` format, no action is required.
+* For compressed datasets (e.g., `Monday-WorkingHours.pcap_ISCX.zip`), you **must extract the archives** into the `datasets/` folder before running the notebooks to ensure the scripts can locate the required `.csv` files.
 
 ---
 
