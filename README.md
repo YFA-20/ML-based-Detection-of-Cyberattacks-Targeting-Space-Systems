@@ -19,7 +19,8 @@ The system supports both **binary classification** (normal vs. attack) and **mul
 The project is organized to ensure traceability from raw datasets to trained models and final fusion logic.
 
 ```text
-├── datasets/               # Raw data sources (compressed as .zip archives)
+Mission_Control/
+├── datasets/               # Raw data sources (CSV files + ZIP for large files >100MB)
 ├── mission_control/        # [MAIN] Fusion engine and simulation logic
 │   └── Mission_Control_Fusion.ipynb
 ├── models/                 # Pre-trained and serialized model artifacts
@@ -31,8 +32,7 @@ The project is organized to ensure traceability from raw datasets to trained mod
 │   ├── 01_Train_Satellite_Final.ipynb
 │   ├── 02_Train_Industrial_Final.ipynb
 │   └── 03_Train_Network_Final.ipynb
-├── requirements.txt        # Python dependencies
-└── README.md               # Project documentation
+└── requirements.txt        # Python dependencies
 ```
 ## Data Handling Note
 
